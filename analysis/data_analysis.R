@@ -22,7 +22,7 @@ t.test(x = df_wide$group_a, y = df_wide$group_b, var.equal = TRUE)
 t.test(x = df_wide$group_a, y = df_wide$group_b)
 
 # ---- kolmogorov–smirnov test
-ks.test(df_wide$group_a, df_wide$group_b)
+ks.test(x = df_wide$group_a, y = df_wide$group_b)
 
 # ---- correlation
 cor.test(x = df_wide$group_a, y = df_wide$group_b)
