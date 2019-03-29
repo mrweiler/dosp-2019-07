@@ -1,0 +1,197 @@
+---
+title: <small>An introduction to digital open <br>research in clinical psychology</small>
+author: <small>Matthias Weiler</small>
+date: <small>30.03.2019</small>
+output:
+  revealjs::revealjs_presentation:
+    theme: black
+    center: TRUE
+    self_contained: FALSE
+    incremental: TRUE
+    reveal_plugins: ["chalkboard"]
+    reveal_options:
+      chalkboard: 
+      readonly: FALSE
+---
+
+# <small> What did we do last session?</small>
+
+----
+
+We had a tiny introduction to R
+
+----
+
+... played with data  
+from Google trends
+
+----
+
+... and from the Hellenic  
+Statistical Authority
+
+----
+
+Any questions or anything to add?
+
+
+
+# <small>Last session's homework</small>
+
+----
+
+Who of you created your own  
+data collection script?
+
+----
+
+... uploaded your script to GitHub?
+
+----
+
+Any questions regarding  
+last session's homework?
+
+
+
+# <small>Today:<br>Data analysis</small>
+
+----
+
+## <small>We will take a look at</small>
+
+- t-test
+- Kolmogorov-Smirnov Test
+- Pearson's correlation
+- R Notebooks for documentation
+
+```{r cache=FALSE, echo=FALSE}
+knitr::read_chunk('analysis/data_analysis.R')
+```
+
+
+# <small>Before we begin</small>
+
+... we need to generate some data
+
+```{r generate data}
+```
+
+----
+
+Depending on our analysis  
+will either need data in  
+long or in wide format
+
+----
+
+## <small>Data in long format</small>
+
+```{r show long data, echo=FALSE}
+```
+
+----
+
+## <small>Data in wide format</small>
+
+```{r show wide data, echo=FALSE}
+```
+
+
+
+# <small>Independent t-test</small>
+
+----
+
+t-test with data in long format
+
+```{r t test long}
+```
+
+----
+
+t-test with data in wide format
+
+```{r t test wide}
+```
+
+----
+
+t-test for groups with  
+unequal variance
+
+```{r t test unequal variance}
+```
+
+# <small>Kolmogorov-Smirnov Test</small>
+
+----
+
+The Kolmogorov-Smirnov Test  
+uses data in wide format
+
+```{r kolmogorov–smirnov test}
+```
+
+
+
+# <small>Pearson's correlation</small>
+
+----
+
+Pearson's correlation also  
+uses data in wide format
+
+```{r correlation}
+```
+
+
+
+# <small>R Notebooks</small>
+
+----
+
+Document your code! Else,  
+others might not understand  
+what you were doing
+
+----
+
+And by others I mean you in  
+about three weeks from now
+
+----
+
+[Here](https://mrweiler.github.io/dosp-2019-06/notebook.html)
+you can find an R Notebook  
+of today's data analysis
+
+
+
+# <small>Preview: next session</small>
+
+----
+
+"Data visualization"
+
+
+
+# <small>Homework</small>
+
+Add your team members  
+as collaborators to  
+your GitHub repository
+
+----
+
+Add your team members  
+as contributors to your  
+research projects in OSF
+
+
+
+# <small>Any questions?</small>
+
+
+
+# <small>Thank you for your attention</small>

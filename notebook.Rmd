@@ -1,0 +1,51 @@
+---
+title: "My analysis"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r cache=FALSE, echo=FALSE}
+knitr::read_chunk('analysis/data_analysis.R')
+```
+
+First I need to generate some data:
+
+```{r generate data}
+```
+
+This data could either be in long format
+
+```{r show long data, echo=FALSE}
+```
+
+or in wide format
+
+```{r show wide data, echo=FALSE}
+```
+
+To analyze the data we can use an independent t-test.  
+The t-test can be used on data in long format
+
+```{r t test long}
+```
+
+or on data in wide format
+
+```{r t test wide}
+```
+
+There is also a t-test for groups with unequal variance
+
+```{r t test unequal variance}
+```
+
+The Kolmogorov-Smirnov Test uses data in wide format
+
+```{r kolmogorov–smirnov test}
+```
+
+Pearson's correlation also uses data in wide format
+
+```{r correlation}
+```
