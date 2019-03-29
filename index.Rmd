@@ -162,7 +162,7 @@ about three weeks from now
 
 ----
 
-[Here](https://mrweiler.github.io/dosp-2019-06/notebook.html)
+[Here](https://mrweiler.github.io/dosp-2019-07/notebook.html)
 you can find an R Notebook  
 of today's data analysis
 
