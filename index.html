@@ -583,27 +583,27 @@ long or in wide format</p>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">8.593193</td>
+<td style="text-align: right;">7.660159</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">-6.118824</td>
+<td style="text-align: right;">7.878478</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">0.715577</td>
+<td style="text-align: right;">4.794360</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">7.882344</td>
+<td style="text-align: right;">14.378242</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">3.125312</td>
+<td style="text-align: right;">-8.096252</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">11.624838</td>
+<td style="text-align: right;">4.605610</td>
 </tr>
 </tbody>
 </table>
@@ -618,28 +618,28 @@ long or in wide format</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">8.593193</td>
-<td style="text-align: right;">27.12405</td>
+<td style="text-align: right;">7.660159</td>
+<td style="text-align: right;">30.24048</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">-6.118824</td>
-<td style="text-align: right;">24.15804</td>
+<td style="text-align: right;">7.878478</td>
+<td style="text-align: right;">18.10184</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">0.715577</td>
-<td style="text-align: right;">21.24625</td>
+<td style="text-align: right;">4.794360</td>
+<td style="text-align: right;">15.78412</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">7.882344</td>
-<td style="text-align: right;">27.53650</td>
+<td style="text-align: right;">14.378242</td>
+<td style="text-align: right;">28.15164</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">3.125312</td>
-<td style="text-align: right;">21.27762</td>
+<td style="text-align: right;">-8.096252</td>
+<td style="text-align: right;">25.57565</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">11.624838</td>
-<td style="text-align: right;">41.14760</td>
+<td style="text-align: right;">4.605610</td>
+<td style="text-align: right;">21.79518</td>
 </tr>
 </tbody>
 </table>
@@ -652,13 +652,13 @@ long or in wide format</p>
 ##  Two Sample t-test
 ## 
 ## data:  score by group
-## t = -16.51, df = 58, p-value &lt; 2.2e-16
+## t = -14.09, df = 58, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -24.32456 -19.06413
+##  -23.51592 -17.66530
 ## sample estimates:
 ## mean in group group_a mean in group group_b 
-##              4.563933             26.258278</code></pre>
+##               4.85866              25.44927</code></pre>
 </section><section class="slide level2">
 
 <p>t-test with data in wide format</p>
@@ -667,13 +667,13 @@ long or in wide format</p>
 ##  Two Sample t-test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = -16.51, df = 58, p-value &lt; 2.2e-16
+## t = -14.09, df = 58, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -24.32456 -19.06413
+##  -23.51592 -17.66530
 ## sample estimates:
 ## mean of x mean of y 
-##  4.563933 26.258278</code></pre>
+##   4.85866  25.44927</code></pre>
 </section><section class="slide level2">
 
 <p>t-test for groups with<br />
@@ -683,13 +683,13 @@ unequal variance</p>
 ##  Welch Two Sample t-test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = -16.51, df = 57.533, p-value &lt; 2.2e-16
+## t = -14.09, df = 57.857, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -24.32501 -19.06368
+##  -23.51608 -17.66515
 ## sample estimates:
 ## mean of x mean of y 
-##  4.563933 26.258278</code></pre>
+##   4.85866  25.44927</code></pre>
 </section></section>
 <section><section id="kolmogorov-smirnov-test" class="title-slide slide level1"><h1><small>Kolmogorov-Smirnov Test</small></h1></section><section class="slide level2">
 
@@ -700,7 +700,7 @@ uses data in wide format</p>
 ##  Two-sample Kolmogorov-Smirnov test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## D = 1, p-value &lt; 2.2e-16
+## D = 0.96667, p-value = 1.11e-15
 ## alternative hypothesis: two-sided</code></pre>
 </section></section>
 <section><section id="pearsons-correlation" class="title-slide slide level1"><h1><small>Pearson’s correlation</small></h1></section><section class="slide level2">
@@ -712,13 +712,13 @@ uses data in wide format</p>
 ##  Pearson&#39;s product-moment correlation
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = 0.89205, df = 28, p-value = 0.38
+## t = 1.434, df = 28, p-value = 0.1626
 ## alternative hypothesis: true correlation is not equal to 0
 ## 95 percent confidence interval:
-##  -0.2063933  0.4967553
+##  -0.1089649  0.5682884
 ## sample estimates:
 ##       cor 
-## 0.1662368</code></pre>
+## 0.2615728</code></pre>
 </section></section>
 <section><section id="r-notebooks" class="title-slide slide level1"><h1><small>R Notebooks</small></h1></section><section class="slide level2">
 
@@ -747,7 +747,9 @@ sections of your R Script</p>
 <p>You can include your R Script<br />
 into your R Notebook or any<br />
 other R Markdown document</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">knitr<span class="op">::</span><span class="kw">read_chunk</span>(<span class="st">&#39;analysis/data_analysis.R&#39;</span>)</a></code></pre></div>
+<pre><code>&#39;&#39;&#39;{r}
+knitr::read_chunk(&#39;analysis/data_analysis.R&#39;)
+&#39;&#39;&#39;</code></pre>
 </section><section class="slide level2">
 
 <p>And call sections of your<br />

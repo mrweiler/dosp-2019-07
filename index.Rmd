@@ -186,8 +186,10 @@ You can include your R Script
 into your R Notebook or any  
 other R Markdown document
 
-```{r cache=FALSE}
+```{}
+'''{r}
 knitr::read_chunk('analysis/data_analysis.R')
+'''
 ```
 
 ----
