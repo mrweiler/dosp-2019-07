@@ -583,27 +583,27 @@ long or in wide format</p>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">3.100104</td>
+<td style="text-align: right;">8.593193</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">3.865514</td>
+<td style="text-align: right;">-6.118824</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">6.798301</td>
+<td style="text-align: right;">0.715577</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">5.700945</td>
+<td style="text-align: right;">7.882344</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">17.643223</td>
+<td style="text-align: right;">3.125312</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">group_a</td>
-<td style="text-align: right;">-2.736553</td>
+<td style="text-align: right;">11.624838</td>
 </tr>
 </tbody>
 </table>
@@ -618,28 +618,28 @@ long or in wide format</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">3.100104</td>
-<td style="text-align: right;">31.30849</td>
+<td style="text-align: right;">8.593193</td>
+<td style="text-align: right;">27.12405</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">3.865514</td>
-<td style="text-align: right;">28.78993</td>
+<td style="text-align: right;">-6.118824</td>
+<td style="text-align: right;">24.15804</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">6.798301</td>
-<td style="text-align: right;">24.18903</td>
+<td style="text-align: right;">0.715577</td>
+<td style="text-align: right;">21.24625</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">5.700945</td>
-<td style="text-align: right;">26.36139</td>
+<td style="text-align: right;">7.882344</td>
+<td style="text-align: right;">27.53650</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">17.643223</td>
-<td style="text-align: right;">27.63809</td>
+<td style="text-align: right;">3.125312</td>
+<td style="text-align: right;">21.27762</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">-2.736553</td>
-<td style="text-align: right;">24.60984</td>
+<td style="text-align: right;">11.624838</td>
+<td style="text-align: right;">41.14760</td>
 </tr>
 </tbody>
 </table>
@@ -652,13 +652,13 @@ long or in wide format</p>
 ##  Two Sample t-test
 ## 
 ## data:  score by group
-## t = -18.611, df = 58, p-value &lt; 2.2e-16
+## t = -16.51, df = 58, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -22.44757 -18.08774
+##  -24.32456 -19.06413
 ## sample estimates:
 ## mean in group group_a mean in group group_b 
-##              4.287314             24.554968</code></pre>
+##              4.563933             26.258278</code></pre>
 </section><section class="slide level2">
 
 <p>t-test with data in wide format</p>
@@ -667,13 +667,13 @@ long or in wide format</p>
 ##  Two Sample t-test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = -18.611, df = 58, p-value &lt; 2.2e-16
+## t = -16.51, df = 58, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -22.44757 -18.08774
+##  -24.32456 -19.06413
 ## sample estimates:
 ## mean of x mean of y 
-##  4.287314 24.554968</code></pre>
+##  4.563933 26.258278</code></pre>
 </section><section class="slide level2">
 
 <p>t-test for groups with<br />
@@ -683,13 +683,13 @@ unequal variance</p>
 ##  Welch Two Sample t-test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = -18.611, df = 53.484, p-value &lt; 2.2e-16
+## t = -16.51, df = 57.533, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -22.45150 -18.08381
+##  -24.32501 -19.06368
 ## sample estimates:
 ## mean of x mean of y 
-##  4.287314 24.554968</code></pre>
+##  4.563933 26.258278</code></pre>
 </section></section>
 <section><section id="kolmogorov-smirnov-test" class="title-slide slide level1"><h1><small>Kolmogorov-Smirnov Test</small></h1></section><section class="slide level2">
 
@@ -700,7 +700,7 @@ uses data in wide format</p>
 ##  Two-sample Kolmogorov-Smirnov test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## D = 0.96667, p-value = 1.11e-15
+## D = 1, p-value &lt; 2.2e-16
 ## alternative hypothesis: two-sided</code></pre>
 </section></section>
 <section><section id="pearsons-correlation" class="title-slide slide level1"><h1><small>Pearson’s correlation</small></h1></section><section class="slide level2">
@@ -712,35 +712,68 @@ uses data in wide format</p>
 ##  Pearson&#39;s product-moment correlation
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = 0.57352, df = 28, p-value = 0.5709
+## t = 0.89205, df = 28, p-value = 0.38
 ## alternative hypothesis: true correlation is not equal to 0
 ## 95 percent confidence interval:
-##  -0.2627139  0.4505333
+##  -0.2063933  0.4967553
 ## sample estimates:
-##      cor 
-## 0.107754</code></pre>
+##       cor 
+## 0.1662368</code></pre>
 </section></section>
 <section><section id="r-notebooks" class="title-slide slide level1"><h1><small>R Notebooks</small></h1></section><section class="slide level2">
 
-<p>Document your code! Else,<br />
-others might not understand<br />
+<p>You need to document your code<br />
+or others might not understand<br />
 what you were doing</p>
 </section><section class="slide level2">
 
-<p>And by others I mean you in<br />
+<p>“Others” includes you in<br />
 about three weeks from now</p>
 </section><section class="slide level2">
 
 <p><a href="https://mrweiler.github.io/dosp-2019-07/notebook.html">Here</a> you can find an R Notebook<br />
 of today’s data analysis</p>
+</section><section class="slide level2">
+
+<p>R Notebooks let you reuse<br />
+the code of an R Script</p>
+</section><section class="slide level2">
+
+<p>First you need to label<br />
+sections of your R Script</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="co"># ---- my first label</span></a></code></pre></div>
+</section><section class="slide level2">
+
+<p>You can include your R Script<br />
+into your R Notebook or any<br />
+other R Markdown document</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">knitr<span class="op">::</span><span class="kw">read_chunk</span>(<span class="st">&#39;analysis/data_analysis.R&#39;</span>)</a></code></pre></div>
+</section><section class="slide level2">
+
+<p>And call sections of your<br />
+code using your labels</p>
+<pre><code>&#39;&#39;&#39;{r my first tag}
+&#39;&#39;&#39;</code></pre>
+</section><section class="slide level2">
+
+<p>More information can be found<br />
+in the <a href="https://rmarkdown.rstudio.com/authoring_basics.html">R Markdown Basics</a></p>
 </section></section>
 <section><section id="preview-next-session" class="title-slide slide level1"><h1><small>Preview: next session</small></h1></section><section class="slide level2">
 
 <p>“Data visualization”</p>
 </section></section>
-<section><section id="homework" class="title-slide slide level1"><h1><small>Homework</small></h1><p>Add your team members<br />
+<section><section id="homework" class="title-slide slide level1"><h1><small>Homework</small></h1></section><section class="slide level2">
+
+<p>Create an R Notebook to<br />
+document your code</p>
+</section></section>
+<section><section id="homework-for-the-team-captains" class="title-slide slide level1"><h1><small>Homework for the team captains</small></h1></section><section class="slide level2">
+
+<p>Add your team members<br />
 as collaborators to<br />
-your GitHub repository</p></section><section class="slide level2">
+your GitHub repository</p>
+</section><section class="slide level2">
 
 <p>Add your team members<br />
 as contributors to your<br />

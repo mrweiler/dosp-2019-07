@@ -1649,14 +1649,18 @@ $(document).ready(function () {
 </div>
 
 
-<p>First I need to generate some data:</p>
+<div id="generate-data" class="section level2 tabset">
+<h2>Generate data</h2>
+<p>First we need to generate some data:</p>
 <pre class="r"><code>group_a &lt;- rnorm(n = 30, mean = 5, sd = 5)
 group_b &lt;- rnorm(n = 30, mean = 25, sd = 5)
 df_wide &lt;- data.frame(group_a, group_b)
 df_long &lt;- tidyr::gather(
   df_wide, group_a, group_b,
   key = group, value = score)</code></pre>
-<p>This data could either be in long format</p>
+<div id="long-format" class="section level3">
+<h3>Long format</h3>
+<p>This is data in long format.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1667,31 +1671,34 @@ df_long &lt;- tidyr::gather(
 <tbody>
 <tr class="odd">
 <td align="left">group_a</td>
-<td align="right">12.459542</td>
+<td align="right">4.133065</td>
 </tr>
 <tr class="even">
 <td align="left">group_a</td>
-<td align="right">14.350368</td>
+<td align="right">4.380469</td>
 </tr>
 <tr class="odd">
 <td align="left">group_a</td>
-<td align="right">3.247076</td>
+<td align="right">1.244878</td>
 </tr>
 <tr class="even">
 <td align="left">group_a</td>
-<td align="right">6.232917</td>
+<td align="right">6.969931</td>
 </tr>
 <tr class="odd">
 <td align="left">group_a</td>
-<td align="right">5.705562</td>
+<td align="right">2.848575</td>
 </tr>
 <tr class="even">
 <td align="left">group_a</td>
-<td align="right">6.895588</td>
+<td align="right">8.858489</td>
 </tr>
 </tbody>
 </table>
-<p>or in wide format</p>
+</div>
+<div id="wide-format" class="section level3">
+<h3>Wide format</h3>
+<p>This is data in wide format.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1701,92 +1708,115 @@ df_long &lt;- tidyr::gather(
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">12.459542</td>
-<td align="right">32.45800</td>
+<td align="right">4.133065</td>
+<td align="right">21.43960</td>
 </tr>
 <tr class="even">
-<td align="right">14.350368</td>
-<td align="right">26.26893</td>
+<td align="right">4.380469</td>
+<td align="right">26.02824</td>
 </tr>
 <tr class="odd">
-<td align="right">3.247076</td>
-<td align="right">22.80755</td>
+<td align="right">1.244878</td>
+<td align="right">33.83444</td>
 </tr>
 <tr class="even">
-<td align="right">6.232917</td>
-<td align="right">30.69437</td>
+<td align="right">6.969931</td>
+<td align="right">27.96220</td>
 </tr>
 <tr class="odd">
-<td align="right">5.705562</td>
-<td align="right">27.61815</td>
+<td align="right">2.848575</td>
+<td align="right">15.50881</td>
 </tr>
 <tr class="even">
-<td align="right">6.895588</td>
-<td align="right">21.44846</td>
+<td align="right">8.858489</td>
+<td align="right">25.31243</td>
 </tr>
 </tbody>
 </table>
-<p>To analyze the data we can use an independent t-test.<br />
-The t-test can be used on data in long format</p>
+</div>
+</div>
+<div id="analyze-data" class="section level2">
+<h2>Analyze data</h2>
+<div id="t-test" class="section level3 tabset tabset-fade tabset-pills">
+<h3>T-Test</h3>
+<p>To analyze the data we can use an independent t-test.</p>
+<div id="long-format-1" class="section level4">
+<h4>Long format</h4>
+<p>The t-test can be used on data in long format.</p>
 <pre class="r"><code>t.test(formula = score ~ group, data = df_long, var.equal = TRUE)</code></pre>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  score by group
-## t = -12.733, df = 58, p-value &lt; 2.2e-16
+## t = -13.608, df = 58, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -21.51848 -15.67193
+##  -23.01965 -17.11593
 ## sample estimates:
 ## mean in group group_a mean in group group_b 
-##              6.581452             25.176658</code></pre>
-<p>or on data in wide format</p>
+##              3.999983             24.067769</code></pre>
+</div>
+<div id="wide-format-1" class="section level4">
+<h4>Wide format</h4>
+<p>The t-test can be used on data in wide format.</p>
 <pre class="r"><code>t.test(x = df_wide$group_a, y = df_wide$group_b, var.equal = TRUE)</code></pre>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = -12.733, df = 58, p-value &lt; 2.2e-16
+## t = -13.608, df = 58, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -21.51848 -15.67193
+##  -23.01965 -17.11593
 ## sample estimates:
 ## mean of x mean of y 
-##  6.581452 25.176658</code></pre>
-<p>There is also a t-test for groups with unequal variance</p>
+##  3.999983 24.067769</code></pre>
+</div>
+<div id="unequal-variance" class="section level4">
+<h4>Unequal variance</h4>
+<p>There is also a t-test for groups with unequal variance.</p>
 <pre class="r"><code>t.test(x = df_wide$group_a, y = df_wide$group_b)</code></pre>
 <pre><code>## 
 ##  Welch Two Sample t-test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = -12.733, df = 57.92, p-value &lt; 2.2e-16
+## t = -13.608, df = 54.458, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -21.51857 -15.67184
+##  -23.02374 -17.11183
 ## sample estimates:
 ## mean of x mean of y 
-##  6.581452 25.176658</code></pre>
-<p>The Kolmogorov-Smirnov Test uses data in wide format</p>
-<pre class="r"><code>ks.test(df_wide$group_a, df_wide$group_b)</code></pre>
+##  3.999983 24.067769</code></pre>
+</div>
+</div>
+<div id="kolmogorov-smirnov-test" class="section level3">
+<h3>Kolmogorov-Smirnov Test</h3>
+<p>The Kolmogorov-Smirnov Test uses data in wide format.</p>
+<pre class="r"><code>ks.test(x = df_wide$group_a, y = df_wide$group_b)</code></pre>
 <pre><code>## 
 ##  Two-sample Kolmogorov-Smirnov test
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## D = 0.96667, p-value = 1.11e-15
+## D = 0.9, p-value = 5.789e-13
 ## alternative hypothesis: two-sided</code></pre>
-<p>Pearson’s correlation also uses data in wide format</p>
+</div>
+<div id="pearsons-correlation" class="section level3">
+<h3>Pearson’s correlation</h3>
+<p>Pearson’s correlation also uses data in wide format.</p>
 <pre class="r"><code>cor.test(x = df_wide$group_a, y = df_wide$group_b)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s product-moment correlation
 ## 
 ## data:  df_wide$group_a and df_wide$group_b
-## t = 4.4359, df = 28, p-value = 0.0001294
+## t = 0.54701, df = 28, p-value = 0.5887
 ## alternative hypothesis: true correlation is not equal to 0
 ## 95 percent confidence interval:
-##  0.3671373 0.8142460
+##  -0.2673461  0.4465535
 ## sample estimates:
-##      cor 
-## 0.642433</code></pre>
+##       cor 
+## 0.1028271</code></pre>
+</div>
+</div>
 
 
 

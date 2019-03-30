@@ -12,13 +12,13 @@ knitr::kable(head(df_long))
 # ---- show wide data
 knitr::kable(head(df_wide))
 
-# ---- t test long
+# ---- t-test long
 t.test(formula = score ~ group, data = df_long, var.equal = TRUE)
 
-# ---- t test wide
+# ---- t-test wide
 t.test(x = df_wide$group_a, y = df_wide$group_b, var.equal = TRUE)
 
-# ---- t test unequal variance
+# ---- t-test unequal variance
 t.test(x = df_wide$group_a, y = df_wide$group_b)
 
 # ---- kolmogorov–smirnov test
